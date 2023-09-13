@@ -1,1 +1,0 @@
-{"version":1,"references":{"c:Lean.Parser.Category.tactic":{"usages":[[6,56,6,62],[10,6,10,12]],"definition":null},"c:FiniteInductiveType":{"usages":[],"definition":[6,16,6,35]}},"module":"Library.Tactic.FiniteInductive"}

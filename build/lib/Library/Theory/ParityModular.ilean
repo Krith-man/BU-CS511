@@ -1,1 +1,0 @@
-{"version":1,"references":{"c:Int.odd_iff_modEq":{"usages":[],"definition":[4,8,4,25]},"c:Int.even_iff_modEq":{"usages":[],"definition":[7,8,7,26]},"c:Int.Odd":{"usages":[[4,36,4,39]],"definition":null},"c:Int.Even":{"usages":[[7,37,7,41]],"definition":null},"c:Int":{"usages":[[4,31,4,32],[7,32,7,33]],"definition":null}},"module":"Library.Theory.ParityModular"}
