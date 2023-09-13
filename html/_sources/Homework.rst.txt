@@ -1,0 +1,7 @@
+.. _homework:
+
+Homework
+========
+
+.. include:: Homework/hw0.inc
+.. include:: Homework/hw1.inc
