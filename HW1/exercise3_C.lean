@@ -4,7 +4,6 @@ import Library.Tactic.Numbers
 import Library.Tactic.Addarith
 import Library.Tactic.Cancel
 
--- C
 axiom notnotE {P : Prop} (h : ¬ ¬ P) : P
 
 example {P Q R : Prop} (h1 : (P ∧ ¬Q) → R) (h_notR : ¬R) (h_P : P) : Q := by
