@@ -18,7 +18,7 @@ calc
   a + b = (2 * (a + b))/2 := by ring
   _ = a / 2 + (a + 2 * b) / 2 := by ring
   _ ≥ a / 2 + 4 / 2 := by rel [h2]
-  _ ≥ a / 2 + 2 := by linarith
+  _ = a / 2 + 2 := by ring
   _ ≥ 3 / 2 + 2 := by rel [h1]
   _ ≥ 3 := by numbers
 
@@ -27,7 +27,7 @@ example {x : ℤ} (hx : x ≥ 9) : x ^ 3 - 8 * x ^ 2 + 2 * x ≥ 3 :=
   calc
     x ^ 3 - 8 * x ^ 2 + 2 * x = x * (x - 9) * (x + 1) + 11 * x := by ring
     _ ≥ x * (9 - 9) * (x + 1) + 11 * x := by rel [hx]
-    _ ≥ 11 * x := by linarith
+    _ = 11 * x := by ring
     _ ≥ 11 * 9 := by rel [hx]
     _ ≥ 3 := by numbers
     
