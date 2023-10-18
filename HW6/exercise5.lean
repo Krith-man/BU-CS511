@@ -21,6 +21,13 @@ theorem superpowered_one : Superpowered 1 := by
 
 -- Exercise 5a)
 -- Exercise 1 5.2.7
+
+lemma tribalanced_zero : Tribalanced 0 := by
+ dsimp [Tribalanced]
+ intros n 
+ simp
+ numbers
+
 example : ∃ x : ℝ, Tribalanced x ∧ ¬ Tribalanced (x + 1) := by
   by_cases h2: Tribalanced 1
   . use 1
@@ -39,14 +46,7 @@ example : ∃ x : ℝ, Tribalanced x ∧ ¬ Tribalanced (x + 1) := by
       contradiction
   . use 0
     constructor
-    . have h_trib_0: ∀ n : ℕ, (1 + (0:ℝ) / n) ^ n < 3 := by
-      {
-        intro n
-        calc
-          (1 + (0:ℝ) / n) ^ n = 1 := by ring
-              _ < 3 := by numbers
-      }
-      apply h_trib_0
+    . apply tribalanced_zero
     . by_cases h2: Tribalanced (0+1)
       . simp at h2 
         contradiction
