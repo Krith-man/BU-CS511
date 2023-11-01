@@ -7,16 +7,17 @@ import Library.Tactic.Numbers
 import Library.Tactic.Addarith
 import Library.Tactic.Use
 
-def recursive_sum : ℕ → ℕ
-  | 0 => 0
-  | (n + 1) =>  2 * n + 1 + (recursive_sum n)
+def foo : ℕ → ℕ
+  | 0     => 1
+  | n + 1 => foo (n) + 2 * n + 3
 
--- Exercise 5b)
-theorem problem5b (n : ℕ) (hn : 1 ≤ n): ∃ j : ℕ, recursive_sum n = j ^ 2 := by
-  use n
-  induction_from_starting_point n, hn with k hk IH
-  · dsimp[recursive_sum]
+-- Exercise 5b
+theorem problem5b {n : ℕ} : ∃ (k : ℕ), foo (n) = k ^ 2 := by
+  use n + 1 
+  simple_induction n with n IH
+  . dsimp[foo]
     numbers
-  · dsimp[recursive_sum]
-    ring
+  . dsimp[foo]
+    simp
     rw[IH]
+    ring
